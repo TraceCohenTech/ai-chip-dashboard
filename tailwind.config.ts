@@ -9,8 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "chip-cyan": "#00D4FF",
+        "chip-dark": "#0A0A0F",
+        "chip-card": "#12121A",
+        "chip-border": "#1E1E2E",
+        "chip-amber": "#FFB800",
+        "chip-green": "#00FF88",
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
     },
   },
