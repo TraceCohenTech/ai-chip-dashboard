@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 import HeroStats from './components/HeroStats';
 import Footer from './components/Footer';
-import { Grid } from '../components/canvasui/Grid';
+import { Liquid } from '../components/canvasui/Liquid';
 
 const CircuitBackground = dynamic(() => import('./components/CircuitBackground'), { ssr: false });
 const FundingBubbles = dynamic(() => import('./components/FundingBubbles'), { ssr: false });
@@ -22,20 +22,16 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0A0A0F]" />
       </div>
 
-      <Grid
-        tileSize={110}
-        gap={1}
-        cornerRadius={2}
-        amplitude={1.6}
-        liftHeight={34}
-        tilt={0.5}
-        shading={0.08}
-        tint={[0, 0.83, 1]}
-        tintStrength={0.08}
-        idleRipples={0}
+      <Liquid
+        overlay
+        color={[0, 0.83, 1]}
+        intensity={1.2}
+        blend={2.5}
+        radius={0.2}
+        densityDissipation={0.94}
       >
         <HeroStats />
-      </Grid>
+      </Liquid>
 
       <div className="relative z-10">
         <FundingBubbles />
